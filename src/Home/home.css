@@ -1,0 +1,13 @@
+.main {
+    text-align: center;
+    width: 100%;
+}
+
+.search {
+    
+    width: 200px;
+    height: 40px;
+    border-radius: 50px;
+    border: 4px solid gray;
+}
+
