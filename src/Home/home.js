@@ -6,6 +6,7 @@ async function fetchPokemonData(pokemon) {
     if (typeof pokemon !== 'string') {
         return;
     } else {
+        pokemon = pokemon.toLowerCase();
         const endpoint = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
         return await fetch(endpoint)
             .then((response) => response.json())

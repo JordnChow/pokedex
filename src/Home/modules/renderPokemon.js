@@ -8,7 +8,7 @@ function createPokemonImage(pokemon) {
 
 function renderPokemon(data) {
     const pokeID = data.id;
-    const pokeName = data.name;
+    const pokeName = data.name.toUpperCase();
     const pokeType = data.types && data.types.length === 1 ? data.types[0].type.name : `${data.types[0].type.name} / ${data.types[1].type.name}`;
     const pokeImage = createPokemonImage(data);
     return(
@@ -16,7 +16,7 @@ function renderPokemon(data) {
             {pokeImage}
             <h2>Name: {pokeName}</h2>
             <p>ID: #{pokeID}</p>
-            <p>Type: {pokeType}</p>
+            <p>Type: {pokeType.toUpperCase()}</p>
         </div>
     )
 }
